@@ -1,0 +1,30 @@
+from matplotlib import pyplot as plt
+
+a = ['War2', 'Game1', 'OnePiece','Island','SpiderMan', 'Dog', 'Cat1','Couth','Naruto','Bleach','FullMetal', 'Loveerrrr', 'Men', 'Onekid','Python','Caot','Juju','Plt','United','Light2']
+b = [56.01,26.94,17.53,16.49,15.45,12.96,11.8,11.61,11.28,11.12,10.49,10.3,8.75,7.55,7.32,6.99,6.88,6.86,6.58,6.23]
+
+# set the plot size
+plt.figure(figsize=(20,8), dpi=80)
+# create bar
+plt.barh(a, b, height=0.9, color="orange") # set the width, barh is to make horizontal, use height for barh, use width for bar
+
+# x-axis
+plt.xticks(a)
+
+# axis labels
+plt.xlabel('Tickets in million')
+plt.ylabel('Movies name')
+plt.title ('Moves vs Tickets') 
+
+#grid
+plt.grid(alpha=0.8, linestyle="--")
+
+# lines labels
+
+
+#legend
+plt.legend(loc='upper right')
+
+# save
+plt.savefig('Movies1.png')
+plt.show()

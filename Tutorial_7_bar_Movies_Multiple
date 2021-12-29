@@ -1,0 +1,27 @@
+from matplotlib import pyplot as plt
+
+a = ['Ape3', 'Final', 'Legend', 'Cat']
+b_16 = [15746,312,4497,319]
+b_15 = [12357,156,2045,168]
+b_14 = [2358,399,2358,362]
+
+bar_width = 0.2
+x_14 = range(len(a))
+x_15 = [i+bar_width for i in x_14]
+x_16 = [i+bar_width*2 for i in x_14]
+
+# figure size
+plt.figure(figsize=(20,8), dpi=80)
+
+# bar
+plt.bar(x_14,b_14, width=bar_width, label='09-14')
+plt.bar(x_15,b_15, width=bar_width, label='09-15')
+plt.bar(x_16,b_16, width=bar_width,label='09-16')
+
+# x-xais
+plt.xticks(x_15, a)
+
+# legend 
+plt.legend(loc='upper right')
+
+plt.show() 
