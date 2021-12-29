@@ -1,0 +1,31 @@
+from matplotlib import pyplot as plt
+  
+x = range(11,31)
+y1 = [1,0,1,1,2,4,3,2,3,4,4,5,6,5,4,3,3,1,1,1]
+y2 = [1,0,3,1,2,2,3,3,2,1,2,1,1,1,1,1,1,1,1,1]
+# reset the size of plot
+plt.figure(figsize=(20,8), dpi=80)
+
+# line labels
+plt.plot(x,y1, label='me',color = "orange",linestyle=':',linewidth=10)   # Add color, line style, line width
+plt.plot(x,y2, label='him', color = "#DB7093", linestyle='-')    # Add color, line style
+
+# reset x and y
+_xtick_labels = ["{} years old".format(i) for i in x]
+plt.xticks(x, _xtick_labels, rotation=-45)
+plt.yticks(range(0,9))
+
+# labels x and y
+plt.xlabel('Age')
+plt.ylabel('Numbers of relationships')
+plt.title('Numbers of relationships make from age 11 to 30')
+
+# plot makeup
+plt.grid(alpha=0.4,linestyle='--')      # alpha is transparency
+
+# add lines labels location
+plt.legend(loc = "upper left")   # loc is location
+  
+# save
+plt.savefig('Relationships1.png')
+plt.show()
